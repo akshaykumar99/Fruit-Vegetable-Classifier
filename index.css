@@ -1,0 +1,83 @@
+html {
+    height: 100%;
+}
+body{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top : 2%;
+    background: linear-gradient(130deg, grey, white);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}   
+h2{
+    text-align: center;
+    font-style: italic;
+    font-weight: 900;
+    font-variant: small-caps;
+    font-family : serif;
+    letter-spacing: 2px;
+    color : black;
+    font-size : 35px;
+    text-shadow: 2px 1px 3px rgb(58, 58, 58);
+}
+#im{
+    height : 300px;
+    width: 300px;
+    border : 5px groove rgb(212, 211, 211);
+    border-radius: 10px;
+    object-fit: cover;
+}
+#wc{
+    height : 300px;
+    width : 300px;
+    border : 5px groove rgb(212, 211, 211);
+    border-radius: 10px;
+    object-fit: cover;
+}
+#col1{
+    float : left;
+}
+#col2{
+    float : right;
+}
+.textt{
+    color : black;
+    font-variant: small-caps;
+}
+
+.urlf{
+    padding-bottom: 20px;
+}
+.filef{
+    padding-bottom: 20px;
+}
+.butt{
+    border-radius: 7px;
+    background: grey;
+    color : white;
+    cursor: pointer;
+}
+.second{
+    margin-left : 80px
+}
+#stopPredicting{
+    margin-left: 40px;
+}
+.res{
+    text-align: center;
+}
+#result{
+    margin-top : 500px;
+    font-size : 25px;
+    font-family: serif;
+    font-variant: small-caps;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+input{
+    border-radius: 4px;
+}
+.flist{
+    text-align: center;
+    color : rgb(83, 83, 83);
+}

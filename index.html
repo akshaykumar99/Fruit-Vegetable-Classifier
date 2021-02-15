@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href = 'index.css' rel = 'stylesheet'>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+        <script src="webcam.js"></script>
+    </head>
+    <title>Fruit Classifier</title>
+    <body>
+        <div>
+            <h2>Fruit & Vegetable Classifier</h2>
+        </div>
+
+        <div id = 'col1'>
+            <div>
+                <image src = 'Sample Images/grapes.jpg' id = 'im' alt="IMAGE"></image>
+                <div class = 'box'>
+                    <div class = 'textt'>
+                        <p>Select an image that you want to classify</p>
+                    </div>
+                    <div class = 'filef'>
+                        <input type = "file" accept = "image/*" name = 'image' onchange = "loadFile(event)" id = "file" >
+                    </div>
+                    <div>
+                        <button type = 'button' class = 'butt' id = 'doclass1' onclick = "doclass1()">Classify</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id = 'col2'>
+            <video autoplay playsinline muted poster = 'Sample Images/strawberries.jpg' id="wc"></video>
+            <div class = 'box'>
+                <p class = 'second textt'>Using webcam</p>
+                <div>
+                    <button type="button" class = 'butt' id="startPredicting" onclick="startPredicting()" >Start Predicting</button>
+                    <button type="button" class = 'butt' id="stopPredicting" onclick="stopPredicting()" >Stop Predicting</button>
+                </div>
+            </div>
+        </div>
+
+        <div class = 'res'>
+            <p id = 'result'>Loading Model . . .</p>
+        </div>
+
+        <div class = 'flist'>
+            <p>Apple Broccoli Grape Lemon Mango Orange Strawberry</p>
+        </div>
+    </body>
+    <script src = 'main.js'></script>
+</html>
