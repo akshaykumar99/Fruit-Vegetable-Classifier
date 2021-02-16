@@ -6,7 +6,7 @@ var permission = false;
 var data_list = ['Apple', 'Broccoli', 'Grape', 'Lemon', 'Mango', 'Orange', 'Strawberry'];
 
 async function run(){
-	const model_url = './model.json';
+	const model_url = 'https://github.com/akshaykumar99/Fruit-Vegetable-Classifier/blob/master/model.json';
 	model = await tf.loadLayersModel(model_url);
 	// console.log(model.summary());
 	// console.log('model loaded');
