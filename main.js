@@ -6,7 +6,7 @@ var permission = false;
 var data_list = ['Apple', 'Broccoli', 'Grape', 'Lemon', 'Mango', 'Orange', 'Strawberry'];
 
 async function run(){
-	const model_url = 'model.json';
+	const model_url = 'Model/model.json';
 	model = await tf.loadLayersModel(model_url);
 	// console.log(model.summary());
 	// console.log('model loaded');
@@ -73,5 +73,5 @@ async function stopPredicting(){
 	isPredicting = false;
 	predict();
 }
-
-run();
+document.addEventListener('DOMContentLoaded', run);
+// run();
