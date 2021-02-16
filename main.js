@@ -73,5 +73,5 @@ async function stopPredicting(){
 	isPredicting = false;
 	predict();
 }
-
-run();
+document.addEventListener('DOMContentLoaded', run);
+// run();
