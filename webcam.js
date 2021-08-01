@@ -23,11 +23,11 @@ class Webcam {
                 navigator.msGetUserMedia;
             if (navigator.getUserMedia) {
                 navigator.getUserMedia(
-                    {video: {width: 250, height: 250}},
+                    {video: {width: 250, height: 220}},
                     stream => {
                         this.webcamElement.srcObject = stream;
                         this.webcamElement.addEventListener('loadeddata', async () => {
-                        resolve();
+                            resolve();
                         }, false);
                     },
                     error => {
@@ -38,7 +38,7 @@ class Webcam {
                 reject();
             }
         });
-    }
+    };
     async stopit(){
         var stream = this.webcamElement.srcObject;
         // now get all tracks

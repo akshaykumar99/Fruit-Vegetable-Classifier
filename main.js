@@ -2,8 +2,8 @@ var model;
 var output = document.getElementById('result');
 var imag = document.getElementById('im');
 const webcam = new Webcam(document.getElementById('wc'));
-var permission = false;
-var data_list = ['Apple', 'Broccoli', 'Grape', 'Lemon', 'Mango', 'Orange', 'Strawberry'];
+var data_list = ['Apple', 'Broccoli', 'Grapes', 'Lemon', 'Mango', 'Orange', 'Strawberry'];
+var isPredicting = false;
 
 async function run(){
 	const model_url = 'Model/model.json';
@@ -31,7 +31,7 @@ async function find(){
 
 async function doclass1(){
 	output.innerHTML = 'Result : Classifying . . .';
-    await new Promise(res=>setTimeout(()=>res(true),1));
+    await new Promise(res => setTimeout(() => res(true),1));
 	find();
 }
 async function doclass2(){
@@ -51,7 +51,7 @@ async function predict() {
 		const img = webcam.capture();
 		const result = model.predict(img);
 		var outp = result.dataSync();
-		console.log(outp.length);
+		// console.log(outp.length);
 	
 		return outp.indexOf(Math.max(...outp))
 	  });
@@ -73,5 +73,5 @@ async function stopPredicting(){
 	isPredicting = false;
 	predict();
 }
+
 document.addEventListener('DOMContentLoaded', run);
-// run();
